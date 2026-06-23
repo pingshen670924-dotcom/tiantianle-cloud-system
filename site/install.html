@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#111827">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Tiantianle">
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest?v={version}">
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>天天樂手機雲端獨立版</title>
 <style>
@@ -46,6 +46,6 @@ async function launchTiantianle(){
 }
 document.getElementById('installBtn').addEventListener('click', launchTiantianle);
 document.getElementById('stickyBtn').addEventListener('click', launchTiantianle);
-if('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js?v=2026061602');
+if('serviceWorker' in navigator) navigator.serviceWorker.register('service-worker.js?v=' + Date.now(), { updateViaCache: 'none' });
 </script>
 </body></html>
